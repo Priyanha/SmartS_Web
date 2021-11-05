@@ -1,102 +1,69 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+.our-team{
+    text-align: center;
+    position: relative;
+    color: #fff;
 }
-
-.side {
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	padding: 20px 50px;
-	color: #fff;
-	transform-style: preserve-3d;
-	backface-visibility: hidden;
-	border-radius: 20px;
+.our-team img{
+    width: 100%;
+    height: 100%;
 }
-.content {
-	transform: translatez(70px) scale(0.8);
-	line-height: 1.5em;
+.our-team .content{
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 45%;
+    transform: perspective(400px) rotateX(-90deg);
+    transform-origin: center top 0;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
 }
-.content h1 {
-	position: relative;
+.our-team:hover .content,
+.our-team.active .content{
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
 }
-.content p {
-	margin-top: 50px;
-	line-height: 2em;
+.our-team .content .title{
+    margin: 0 0 10px;
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
 }
-.content h1:before {
-	content: "";
-	position: absolute;
-	bottom: -20px;
-	height: 3px;
-	background-color: #3e3;
-	width: 70px;
-	left: 50%;
-	transform: translateX(-50%);
+.our-team .content .post{
+    margin: 0 0 25px;
+    display: block;
+    font-size: 15px
 }
-.front {
-	z-index: 2;
-	background-size: 100vh;
-	background-size: cover;
-	background-image: url(https://livewallpaperhd.com/wp-content/uploads/2017/07/Dark-Elegant-Wallpaper.jpg);
+.our-team .social{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
-.back {
-	background-color: #333;
-	transform: rotateY(180deg);
-	z-index: 0;
-	padding-top: 10px;
-	background-image: url(https://userscontent2.emaze.com/images/f9538183-0ff9-478f-b964-c8ab90421e3b/3d28e192fda5c17250f96a2779c84475.jpg);
+.our-team .social li{
+    display: inline-block;
 }
-
-form {
-	text-align: left;
+.our-team .social li a{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 0;
+    background-color: #F32248;
+    margin-right: 5px;
+    transition: all 0.5s ease 0s;
+    position: relative;
 }
-.back h1 {
-	margin: 0;
+.our-team .social li a:hover, .our-team.active .social li a{
+    border-radius: 50%;
+    text-decoration: none;
 }
-form label,
-form input {
-	display: block;
-}
-form input,
-form textarea {
-	background: transparent;
-	border: 0;
-	border-bottom: 2px solid #444;
-	padding: 5px;
-	width: 100%;
-	color: #fff;
-}
-form label {
-	margin: 15px 0;
-}
-form input[type="submit"] {
-	display: block;
-	width: auto;
-	margin: 10px auto;
-	padding: 5px 10px;
-	border: 3px solid #555;
-	border-radius: 4px;
-	color: #fff;
-	cursor: pointer;
-}
-/* my button style  */
-.white-mode {
-	text-decoration: none;
-	padding: 7px 10px;
-	background-color: #122;
-	border-radius: 3px;
-	color: #fff;
-	transition: 0.35s ease-in-out;
-	position: fixed;
-	left: 15px;
-	bottom: 15px;
-	font-family: "Montserrat";
-}
-
-.white-mode:hover {
-	background-color: #fff;
-	color: #122;
+@media screen and (max-width: 990px){
+    .our-team{
+        margin-bottom: 30px;
+    }
 }
