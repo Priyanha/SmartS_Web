@@ -63,15 +63,15 @@
   font-style: italic;
 }
 .owl-theme .owl-controls .owl-page span {
-  border: 2px solid #2a3d7d;
+  border: 2px solid #524772;
   background: #fff !important;
   border-radius: 0 !important;
   opacity: 1;
 }
 .owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls .owl-page:hover span {
-  background: #29d18b !important;
-  border-color: #29d18b;
+  background: #ffffff !important;
+  border-color: #020806;
 }
 @media only screen and (max-width: 767px) {
   .testimonial {
